@@ -1244,3 +1244,94 @@ main img {
     height: auto;
   }
 }
+/* FIX 1: SHOW COMPLETE TEAM PHOTOGRAPHS */
+#team .member .pic {
+    height: 250px;
+    overflow: hidden;
+}
+
+#team .member .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 767px) {
+    #team .member .pic {
+        height: 230px;
+    }
+
+    #team .member .pic img {
+        height: 100%;
+        object-fit: contain;
+    }
+}
+/* =========================================
+   OJ WEB STUDIOS - MOBILE NAVIGATION FIX
+========================================= */
+
+@media (max-width: 991px) {
+
+    #header {
+        position: relative;
+        z-index: 10050 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    #header.fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10050 !important;
+    }
+
+    #navbar.navbar-mobile {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        z-index: 10060 !important;
+        overflow-y: auto;
+        background: rgba(6, 9, 22, 0.97) !important;
+    }
+
+    #navbar.navbar-mobile .mobile-nav-toggle {
+        position: fixed !important;
+        top: 12px;
+        right: 15px;
+        z-index: 10070 !important;
+        color: #ffffff !important;
+    }
+
+    #navbar.navbar-mobile ul {
+        display: block !important;
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        bottom: auto;
+        left: 15px;
+        max-height: calc(100dvh - 85px);
+        overflow-y: auto;
+        padding: 15px 0;
+        background: #111831 !important;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 12px;
+    }
+
+    #navbar.navbar-mobile ul a,
+    #navbar.navbar-mobile ul a:focus {
+        display: block;
+        padding: 12px 20px;
+        color: #ffffff !important;
+    }
+
+    #navbar.navbar-mobile ul a:hover,
+    #navbar.navbar-mobile ul a.active {
+        color: #a78bfa !important;
+    }
+}
